@@ -61,6 +61,7 @@
     <Compile Include="SzachyBasicBlue\Hetman.cs" />
     <Compile Include="SzachyBasicBlue\Historia_Ruchow.cs" />
     <Compile Include="SzachyBasicBlue\Krol.cs" />
+    <Compile Include="SzachyBasicBlue\LosujBierki.cs" />
     <Compile Include="SzachyBasicBlue\OdczytGry.cs" />
     <Compile Include="SzachyBasicBlue\Pionek.cs" />
     <Compile Include="SzachyBasicBlue\Pionki_Gracza.cs" />

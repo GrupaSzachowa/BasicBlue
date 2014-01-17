@@ -1,4 +1,4 @@
-namespace BasicBlue
+﻿namespace BasicBlue
 {
     partial class Form1
     {

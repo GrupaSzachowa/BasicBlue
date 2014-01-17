@@ -14,7 +14,7 @@ namespace BasicBlue.SzachyBasicBlue
 {
     class Tools
     {
-        public static TableLayoutPanelCellPosition GetCellPosotion(TableLayoutPanel panel)
+        public static TableLayoutPanelCellPosition GetCellPosotion(TableLayoutPanel panel)//wyznacza pozycje kursora szchownicy - znalezione w necie 
         {
             //mouse position
             Point p = panel.PointToClient(Control.MousePosition);

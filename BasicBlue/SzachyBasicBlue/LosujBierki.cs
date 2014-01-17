@@ -7,7 +7,7 @@ using SzachyBasicBlue;
 
 namespace BasicBlue.SzachyBasicBlue
 {
-    class LosujBierki//Artur Zajączkowski +
+    class LosujBierki//Artur Zajączkowski + Adam Sieradzki + Michał Łuczyński
     {
 
 

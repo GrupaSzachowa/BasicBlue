@@ -38,7 +38,7 @@ namespace BasicBlue.SzachyBasicBlue
         public enum Kolor_pionków
         {
             Czarne,
-            Białe,
+            Biale,
         }
 
         public enum WynikGry

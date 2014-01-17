@@ -51,27 +51,26 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SzachyBasicBlue\Bierka.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Bierka.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Goniec.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Hetman.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Krol.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Pionek.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Skoczek.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Wieza.cs" />
     <Compile Include="SzachyBasicBlue\Enums.cs" />
-    <Compile Include="SzachyBasicBlue\Goniec.cs" />
     <Compile Include="SzachyBasicBlue\Gra.cs" />
     <Compile Include="SzachyBasicBlue\Gracz_Czlowiek.cs" />
     <Compile Include="SzachyBasicBlue\Gracz_Komputer.cs" />
     <Compile Include="SzachyBasicBlue\Gracz.cs" />
-    <Compile Include="SzachyBasicBlue\Hetman.cs" />
     <Compile Include="SzachyBasicBlue\Historia_Ruchow.cs" />
-    <Compile Include="SzachyBasicBlue\Krol.cs" />
     <Compile Include="SzachyBasicBlue\LosujBierki.cs" />
     <Compile Include="SzachyBasicBlue\OdczytGry.cs" />
-    <Compile Include="SzachyBasicBlue\Pionek.cs" />
     <Compile Include="SzachyBasicBlue\Pionki_Gracza.cs" />
-    <Compile Include="SzachyBasicBlue\Prestiz.cs" />
     <Compile Include="SzachyBasicBlue\Program.cs" />
     <Compile Include="SzachyBasicBlue\Silnik_Gracza.cs" />
-    <Compile Include="SzachyBasicBlue\Skoczek.cs" />
     <Compile Include="SzachyBasicBlue\Szachownica.cs" />
     <Compile Include="SzachyBasicBlue\Tools.cs" />
-    <Compile Include="SzachyBasicBlue\Wieza.cs" />
     <Compile Include="SzachyBasicBlue\ZapisGry.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

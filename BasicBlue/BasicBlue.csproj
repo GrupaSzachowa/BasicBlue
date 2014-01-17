@@ -50,34 +50,27 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Podglad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Podglad.Designer.cs">
-      <DependentUpon>Podglad.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SzachyBasicBlue\Bierki\Bierka.cs" />
-    <Compile Include="SzachyBasicBlue\Enums.cs" />
     <Compile Include="SzachyBasicBlue\Bierki\Goniec.cs" />
-    <Compile Include="SzachyBasicBlue\Gra.cs" />
-    <Compile Include="SzachyBasicBlue\Gracz_Czlowiek.cs" />
-    <Compile Include="SzachyBasicBlue\Gracz_Komputer.cs" />
     <Compile Include="SzachyBasicBlue\Bierki\Hetman.cs" />
     <Compile Include="SzachyBasicBlue\Bierki\Krol.cs" />
     <Compile Include="SzachyBasicBlue\Bierki\Pionek.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Skoczek.cs" />
+    <Compile Include="SzachyBasicBlue\Bierki\Wieza.cs" />
+    <Compile Include="SzachyBasicBlue\Enums.cs" />
+    <Compile Include="SzachyBasicBlue\Gra.cs" />
+    <Compile Include="SzachyBasicBlue\Gracz_Czlowiek.cs" />
+    <Compile Include="SzachyBasicBlue\Gracz_Komputer.cs" />
+    <Compile Include="SzachyBasicBlue\Gracz.cs" />
     <Compile Include="SzachyBasicBlue\LosujBierki.cs" />
     <Compile Include="SzachyBasicBlue\Program.cs" />
     <Compile Include="SzachyBasicBlue\RuchDrzewo.cs" />
-    <Compile Include="SzachyBasicBlue\Bierki\Skoczek.cs" />
+    <Compile Include="SzachyBasicBlue\Silnik_Gracza.cs" />
     <Compile Include="SzachyBasicBlue\Tools.cs" />
-    <Compile Include="SzachyBasicBlue\Bierki\Wieza.cs" />
     <Compile Include="SzachyBasicBlue\ZapisOdczyt.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Podglad.resx">
-      <DependentUpon>Podglad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,43 +96,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\goniecBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hetmanBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\goniecWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HetmanWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\krolBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\krolWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pionBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pionWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\skoczekBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\skoczekWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wiezaBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wiezaWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sourcePGNViewer.txt" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

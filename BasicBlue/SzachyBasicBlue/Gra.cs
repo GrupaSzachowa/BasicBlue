@@ -1,24 +1,29 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using BasicBlue.SzachyBasicBlue;
 namespace SzachyBasicBlue {
 	public class Gra  {
-		public string Wyniki;
-		public string Status;
-		public int Wykonane_Ruchy;
-		/// <summary>
-		/// Nazwa gracza
-		/// </summary>
-		public Gracz[] Gracz;
-		public bool Zapis;
-		public bool Odczyt;
+        public Gra()
+        {
+            stworzUstawBierki();
+            kolejka = Enums.czyjaKolej.Osoba;
+        }
+
+        public string Wyniki;
+        public string Status;
+        public int Wykonane_Ruchy;
+
+        public static string pgnString;
+        public static int ileRuchow;
+
 
         public static Enums.czyjaKolej kolejka;
 
         public static List<Bierka> bierkiBiale = new List<Bierka>();
         public static List<Bierka> bierkiCzarne = new List<Bierka>();
-        // funkcja tworz¹ca dwa zestawy bierek (wywyo³ywana na pocz¹tku)
-        
+
+        // funkcja tworz¹ca dwa zestawy bierek (wywo³ywana na pocz¹tku)
         public void stworzUstawBierki()
         {
             for (int i = 0; i < 8; i++)
@@ -69,31 +74,63 @@ namespace SzachyBasicBlue {
             k = new Krol(Enums.Kolor_pionków.Czarne, 4, 0, false);
             bierkiCzarne.Add(k);
         }
-		public void Dodaj_Ruch() {
-			throw new System.Exception("Not implemented");
-		}
-		public void Zakoñczona() {
-			throw new System.Exception("Not implemented");
-		}
-		public void JestSzachMat() {
-			throw new System.Exception("Not implemented");
-		}
-		public void Operacje() {
-			throw new System.Exception("Not implemented");
-		}
-		public void Jest_Pat() {
-			throw new System.Exception("Not implemented");
-		}
-		public void Jest_Szach() {
-			throw new System.Exception("Not implemented");
-		}
 
-        private Historia_Ruchow historia;
-		private ZapisGry zapisGry;
-		private OdczytGry odczytGry;
-		private Gracz gracz;
+        // trzy poni¿sze funkcje wspomagaj¹ prze³o¿enie zapisu wspó³rzêdnych X-Y na zapis A7, B2 itd.
+        static public string tlumaczNazwePola(int x, int y)
+        {
+            string ret = (8 - x).ToString() + tlumaczNazweKolumny(y);
+            return ret;
+        }
 
-		private Bierka bierka;
+        static public string tlumaczNazwePolaPGN(int x, int y)
+        {
+            string ret = tlumaczNazweKolumny(x) + (8 - y).ToString();
+            return ret;
+        }
+
+        public static string tlumaczNazweKolumny(int y)
+        {
+            if (y == 0) return "A";
+            else if (y == 1) return "B";
+            else if (y == 2) return "C";
+            else if (y == 3) return "D";
+            else if (y == 4) return "E";
+            else if (y == 5) return "F";
+            else if (y == 6) return "G";
+            else return "H";
+        }
+
+        public static void ustawSzach(List<Bierka> biale, List<Bierka> czarne)
+        {
+            Bierka.przeliczWszystieRuchy(biale, czarne);
+
+            // sprawdzamy, czy komputer zaszachowa³ osobê
+            foreach (Bierka bi in biale)
+            {
+                foreach (Point poi in bi.mozliweBicia)
+                {
+                    Bierka dozbicia = Bierka.getBierkaByPos(poi.X, poi.Y, biale, czarne);
+                    if (dozbicia.GetType() == typeof(Krol))
+                    {
+                        Gracz_Komputer.szach = true;
+                    }
+                }
+            }
+
+            // czy osoba zaszachowa³a PC ?
+            foreach (Bierka bi in czarne)
+            {
+                foreach (Point poi in bi.mozliweBicia)
+                {
+                    Bierka dozbicia = Bierka.getBierkaByPos(poi.X, poi.Y, biale, czarne);
+                    if (dozbicia.GetType() == typeof(Krol))
+                    {
+                        Gracz_Czlowiek.szach = true;
+                    }
+                }
+
+            }
+        }
 
 	}
 

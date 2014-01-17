@@ -18,7 +18,7 @@ namespace BasicBlue
 
             string zrodlo = BasicBlue.Properties.Resources.sourcePGNViewer.ToString();
 
-            webBrowser1.DocumentText = zrodlo.Replace("TUwstawTekst", html);
+            webBrowser1.DocumentText = zrodlo.Replace("TUwstawTekst",html);
 
         }
     }

@@ -71,7 +71,6 @@
     <Compile Include="SzachyBasicBlue\LosujBierki.cs" />
     <Compile Include="SzachyBasicBlue\Program.cs" />
     <Compile Include="SzachyBasicBlue\RuchDrzewo.cs" />
-    <Compile Include="SzachyBasicBlue\Silnik_Gracza.cs" />
     <Compile Include="SzachyBasicBlue\Tools.cs" />
     <Compile Include="SzachyBasicBlue\ZapisOdczyt.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -105,7 +104,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-	<Folder Include="Resources\" />
     <Content Include="Resources\goniecBlack.png" />
     <Content Include="Resources\goniecWhite.png" />
     <Content Include="Resources\hetmanBlack.png" />

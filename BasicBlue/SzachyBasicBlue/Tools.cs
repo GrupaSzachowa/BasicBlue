@@ -1,20 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
 using SzachyBasicBlue;
 
 namespace BasicBlue.SzachyBasicBlue
 {
     class Tools
     {
-
-
-
-        //The method to get the position of the cell under the mouse.
         public static TableLayoutPanelCellPosition GetCellPosotion(TableLayoutPanel panel)
         {
             //mouse position
@@ -86,7 +85,7 @@ namespace BasicBlue.SzachyBasicBlue
             return pos;
         }
 
-        public static List<Bierka> klonujBierki(List<Bierka> bb)    //pozwoli na pełne klonowanie bierek do nowej listy bez współdzielenia listy
+        public static List<Bierka> klonujBierki(List<Bierka> bb)
         {
             List<Bierka> ret = new List<Bierka>();
             foreach (Bierka b in bb)
@@ -95,17 +94,16 @@ namespace BasicBlue.SzachyBasicBlue
                 ret.Add(nowa);
 
             }
-
+            
             return ret;
         }
 
-
-
-
-
-
-
-
+        public static List<Point> klonujPointy(List<Point> bb)
+        {
+            List<Point> ret = new List<Point>();
+            foreach (Point b in bb) ret.Add(b);
+            return ret;
+        }
 
     }
 }

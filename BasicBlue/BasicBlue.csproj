@@ -67,6 +67,7 @@
     <Compile Include="SzachyBasicBlue\Program.cs" />
     <Compile Include="SzachyBasicBlue\Silnik_Gracza.cs" />
     <Compile Include="SzachyBasicBlue\Tools.cs" />
+    <Compile Include="SzachyBasicBlue\ZapisOdczyt.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

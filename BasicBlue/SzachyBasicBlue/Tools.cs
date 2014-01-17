@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SzachyBasicBlue;
 
 namespace BasicBlue.SzachyBasicBlue
 {
@@ -85,6 +86,18 @@ namespace BasicBlue.SzachyBasicBlue
             return pos;
         }
 
+        public static List<Bierka> klonujBierki(List<Bierka> bb)    //pozwoli na pełne klonowanie bierek do nowej listy bez współdzielenia listy
+        {
+            List<Bierka> ret = new List<Bierka>();
+            foreach (Bierka b in bb)
+            {
+                Bierka nowa = (Bierka)b.Clone();
+                ret.Add(nowa);
+
+            }
+
+            return ret;
+        }
 
 
 

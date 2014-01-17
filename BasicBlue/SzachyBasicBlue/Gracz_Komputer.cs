@@ -5,19 +5,19 @@ using BasicBlue.SzachyBasicBlue;
 using System.Drawing;
 namespace SzachyBasicBlue
 {
-    public class Gracz_Komputer
+    public class Gracz_Komputer     //klasa opisuj¹ca zachowanie komputera
     {
 
-        public static bool szach = false;
-        public static bool szachMat = false;
+        public static bool szach = false;       //na pocz¹tku musimy oprogramowaæ sytuacje specjalne szach i mat, które oczywiœcie na pocz¹tku gry nie maj¹ miejsca
+        public static bool szachMat = false;    
 
         public static bool Zrob_RuchLosowy()
         {
           
-            if (Gra.bierkiCzarne.Count == 0) return false;
+            if (Gra.bierkiCzarne.Count == 0) return false;      //je¿eli komputer nie ma bierek to nie wykona ruchu losowego
 
 
-            if (Gracz_Komputer.szach)
+            if (Gracz_Komputer.szach)       //najpierw sprawdzamy czy zaistnia³ szach - jest on obs³ugiwany priorytetowo przed jakimkolwiek innym ruchem i gdy zaistnieje prubujemy przesuni¹æ króla
             {
                 foreach (Bierka krol in Gra.bierkiCzarne)
                 {
@@ -28,20 +28,20 @@ namespace SzachyBasicBlue
                     }
                 }
             }
+                                                             //je¿eli nie zaistnia³ szach to szukamy mo¿liwoœci bicia
 
-
-            Bierka bi = czyMoznaBic(Enums.Gracz.Komputer);
-            if (bi != null)
+            Bierka bi = czyMoznaBic(Enums.Gracz.Komputer);   //najpierw sprawdzamy czy bicie jest mo¿liwe
+            if (bi != null)     //je¿eli jest to bijemy
             {
                 bi.zbij(Bierka.getBierkaByPos(bi.mozliweBicia[0].X, bi.mozliweBicia[0].Y, Gra.bierkiBiale, Gra.bierkiCzarne));
                 Gra.kolejka = Enums.czyjaKolej.Osoba;
                 Bierka.przeliczWszystieRuchy();
             }
             else
-            {
+            {                   //je¿eli nie to próbujemy wykonaæ ruch dla losowej bierki
                 bool udany = false;
                 Random r = new Random();
-                while (!udany)
+                while (!udany)  //ale oczywiœcie ten ruch musi byæ mo¿liwy
                 {
                     Bierka b = Gra.bierkiCzarne[r.Next(Gra.bierkiCzarne.Count)];
                     if (b.mozliweRuchy.Count > 0)

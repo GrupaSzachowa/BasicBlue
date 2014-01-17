@@ -8,7 +8,17 @@ namespace BasicBlue.SzachyBasicBlue
 {
     public class Enums
     {
+        public enum Gracz
+        {
+            Osoba,
+            Komputer
+        }
 
+        public enum czyjaKolej
+        {
+            Osoba,
+            Komputer
+        }
 
         public enum KierunekRuchu
         {

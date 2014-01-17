@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using BasicBlue.SzachyBasicBlue;
 namespace SzachyBasicBlue {
 	public class Gra  {
@@ -11,6 +12,11 @@ namespace SzachyBasicBlue {
 		public Gracz[] Gracz;
 		public bool Zapis;
 		public bool Odczyt;
+
+        public static Enums.czyjaKolej kolejka;
+
+        public static List<Bierka> bierkiBiale = new List<Bierka>();
+        public static List<Bierka> bierkiCzarne = new List<Bierka>();   
 
 		public void Dodaj_Ruch() {
 			throw new System.Exception("Not implemented");

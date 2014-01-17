@@ -62,7 +62,6 @@
     <Compile Include="SzachyBasicBlue\Gra.cs" />
     <Compile Include="SzachyBasicBlue\Gracz_Czlowiek.cs" />
     <Compile Include="SzachyBasicBlue\Gracz_Komputer.cs" />
-    <Compile Include="SzachyBasicBlue\Gracz.cs" />
     <Compile Include="SzachyBasicBlue\LosujBierki.cs" />
     <Compile Include="SzachyBasicBlue\Program.cs" />
     <Compile Include="SzachyBasicBlue\RuchDrzewo.cs" />

@@ -22,8 +22,17 @@ namespace BasicBlue.SzachyBasicBlue
 
         public enum KierunekRuchu
         {
-            Góra,
-            Dół,
+            Gora,
+            Dol,
+            Skos,
+            Bok,
+            ProstoSkos     // skoczek 
+        }
+
+        public enum Roszada
+        {
+            Krotka,
+            Dluga
         }
 
 

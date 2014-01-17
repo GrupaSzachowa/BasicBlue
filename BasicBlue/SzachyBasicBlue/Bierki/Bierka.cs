@@ -603,7 +603,6 @@ namespace SzachyBasicBlue
         static public void wygenerujMozliweRuchyKrola()
         {
             // funkcja wywoływana po wykryciue szacha. Odświeża ona możliwe do poruszania się pola dla szachowanego króla.
-            Krol k;
             List<Point> doUsuniecia = new List<Point>();
 
             if (Gracz_Czlowiek.szach)

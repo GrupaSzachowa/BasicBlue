@@ -63,15 +63,10 @@
     <Compile Include="SzachyBasicBlue\Gracz_Czlowiek.cs" />
     <Compile Include="SzachyBasicBlue\Gracz_Komputer.cs" />
     <Compile Include="SzachyBasicBlue\Gracz.cs" />
-    <Compile Include="SzachyBasicBlue\Historia_Ruchow.cs" />
     <Compile Include="SzachyBasicBlue\LosujBierki.cs" />
-    <Compile Include="SzachyBasicBlue\OdczytGry.cs" />
-    <Compile Include="SzachyBasicBlue\Pionki_Gracza.cs" />
     <Compile Include="SzachyBasicBlue\Program.cs" />
     <Compile Include="SzachyBasicBlue\Silnik_Gracza.cs" />
-    <Compile Include="SzachyBasicBlue\Szachownica.cs" />
     <Compile Include="SzachyBasicBlue\Tools.cs" />
-    <Compile Include="SzachyBasicBlue\ZapisGry.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -119,6 +119,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnMalaRoszada = new System.Windows.Forms.Button();
             this.btnDuzaRoszada = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1318,6 +1320,10 @@
             this.btnDuzaRoszada.UseVisualStyleBackColor = true;
             this.btnDuzaRoszada.Click += new System.EventHandler(this.btnDuzaRoszada_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1448,6 +1454,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnMalaRoszada;
         private System.Windows.Forms.Button btnDuzaRoszada;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

@@ -23,7 +23,13 @@ namespace BasicBlue.SzachyBasicBlue
                 }
                 linie += Gra.pgnString;
 
-                StreamWriter file = new System.IO.StreamWriter("d:\\szachySave.chess");
+                SaveFileDialog okienko = new SaveFileDialog();
+                okienko.Filter = "Stany gry BasicBlue(chess)|*.chess";
+                if (okienko.ShowDialog() == DialogResult.OK)
+                {
+                    MessageBox.Show("Wybrano plik: " + okienko.FileName);
+                }
+                StreamWriter file = new System.IO.StreamWriter(okienko.FileName);
                 file.WriteLine(linie);
 
                 file.Close();
@@ -44,7 +50,14 @@ namespace BasicBlue.SzachyBasicBlue
             Gra.bierkiBiale.Clear();
             Gra.bierkiCzarne.Clear();
 
-            System.IO.StreamReader file = new System.IO.StreamReader("d:\\szachySave.chess");
+            OpenFileDialog okienko = new OpenFileDialog();
+            okienko.Filter = "Stany gry BasicBlue(chess)|*.chess";
+            if (okienko.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Wybrano plik: " + okienko.FileName);
+            }
+
+            System.IO.StreamReader file = new System.IO.StreamReader(okienko.FileName);
 
             // odczyt i przetwarzanie każdej linii pliku osobno
             while ((linijka = file.ReadLine()) != null)

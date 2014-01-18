@@ -219,7 +219,9 @@ namespace BasicBlue
 
         private void btnZapiszGre_Click(object sender, EventArgs e)
         {
-            ZapisOdczyt.zapiszGre("d:\\szachySave.chess", Gra.bierkiBiale, Gra.bierkiCzarne);
+            //ZapisOdczyt.zapiszGre("d:\\szachySave.chess", Gra.bierkiBiale, Gra.bierkiCzarne);
+            ZapisOdczyt.zapiszGre(this.saveFileDialog1.FileName, Gra.bierkiBiale, Gra.bierkiCzarne); 
+            
         }
 
         private void btnWczytaj_Click(object sender, EventArgs e)
